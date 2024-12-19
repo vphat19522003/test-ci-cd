@@ -1,5 +1,5 @@
 const ForgotPasswordPage = (): JSX.Element => {
-  return <div>ForgotPasswordPage</div>;
+  return <div>ForgotPasswordPae</div>;
 };
 
 export default ForgotPasswordPage;
