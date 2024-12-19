@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Nunito';
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6def1;
+  border-radius: 10px;
+  opacity: 0.33;
+}
+
+.scrollable-content {
+  overflow: hidden;
+}
+
+.scrollable-content:hover {
+  overflow-y: auto;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* (scrollbar thumb) */
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #d6def1;
+  border-radius: 10px;
+  opacity: 0.33;
+}
+
+.rotate-icon {
+  animation: rotate 2s linear infinite;
+}
+
+.floatedImage {
+  animation:
+    zoomIn 1s ease forwards,
+    floatImages 4s ease-in-out infinite;
+  animation-delay: 2s 3s;
+}
+
+.highlight-animation {
+  animation: pulse 2s infinite;
+  transform-origin: left;
+}
+
+.bg-parallax {
+  /* The image used */
+  background-image: url('https://64.media.tumblr.com/723637ba4eccc78bb16892a4857c01f4/tumblr_ozp1sjZM0c1tapwfpo2_1280.pnj');
+
+  /* Full height */
+  height: 320px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatImages {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(var(--from-direction)); /* --from-direction được đặt theo hướng trượt */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

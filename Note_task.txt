@@ -1,0 +1,139 @@
+1. Tạo giao diện login, reigter, forgot password, verify email
+2. Tạo custom common component: label, input - Add một số chức năng ux cho login như : banner ảnh chuyển động,ẩn/hiện mật khẩu, nhắc nhở mở caplock, sửa giao diện
+3. Tạo custom common button, add validate login form - zod, tạo login schema
+4. Tạo ui register
+5. Tạo ui login, verify OTP
+6. Tạo API Register, api send OTP - refresh token, access token
+7. Tạo API refresh token
+8. Tạo API login, logout, verify OTP
+9. Tạo API resend otp, fix middleware check verify account
+10. Ráp api, tạo struct gọi api front end
+11. Tạo custom axios, api hook with react query, axios
+12. Ráp api register user
+13. Ráp api verify otp, resend otp, login, cấu hình axios - verify refresh token
+14. Cấu trúc lại route - auth route - tìm hiểu redux để lưu state toàn cục
+15. Protect route, implement redux, localstorage
+16. Create UI homepage - header
+17. Custom header -> sidebar -> footer
+18. Create sidebar mobile - subsidebar
+19. Create main sidebar, banner slider
+20. Create API USER, ẩn hiện route
+21. Tạo authenticateContext getuser để authenticate khi vào các route, Box hover, logout
+22. Tạo UI User page
+23. Tạo API User -> route -> controller -> service -> repository
+24. Update model user, thêm các field, Tạo api user -> cập nhật,  đổi mật khẩu
+25. Tạo model address, thêm model địa chỉ giao hàng, 
+26. Tạo common combobox
+27. Tạo popup
+28. Tạo ui thêm địa chỉ giao hàng , form thêm địa chỉ
+29. Tạo api địa chỉ người dùng,api CRU setting user,api lưu ảnh -> ráp api vào giao diện 
+    Bộ api address: Tìm tỉnh thành, tìm quận huyện, tìm xã
+                    Thêm địa chỉ, xóa địa chỉ, đặt địa chỉ làm mặc định
+30. -API get list address, xóa address : DONE
+    -Ráp api create address - ráp api province, district, ward, set default
+31. -Tạo giao diện đổi mật khẩu - user setting - security, ráp api
+32. -Ráp api sửa thông tin người dùng.
+33. -Tạo giao diện sửa đổi ảnh đại diện, tạo api: 
+        -Học về stream : writablestream, readablestream, chunk, pipe, Multer, buffer - DONE
+        -Test tạo 1 file và writablestream, readablestream từ file đó - DONE
+        -Tạo giao diện để upload file - DONE
+        -Test sử dụng multer middleware: gửi request sau đó dùng middleware multer để nhận nội dung file, in ra nội dung và các thuộc tính của nó - DONE
+        -Test lưu file ở ổ cứng trước sau đó là buffer (Vùng nhớ ram) in ra nội dung nhận được - DONE
+        -Test upload lên cloudinary khi lưu trên ổ cứng, test upload lên cloudinary khi lưu trên buffer(RAM) - DONE
+34. Tìm hiểu cách thêm ảnh thông qua input file, tạo api upload avatar lên cloudinary, ráp api upload avatar, gắn avatar data vào UI
+
+35. Tạo model category, product, subModel: book, electronics, toys, game
+    -- DONE tạo model category
+    -- DONE api create category, get main category, get sub category, delete
+    -- DONE -> tạo api get category by id => lấy nguyên cây category
+    -- DONE -> tạo model product: 
+                                -Sub model: DONE
+
+36. Tạo api create product, get productList, get product : PENDING
+                                    -Tạo productFactory: DONE
+                                    -Tạo class product, class book : DONE
+                                    -Tạo API create product: DONE
+                                    -Tạo API get list products đơn giản: PENDING
+                                    -Tìm hiểu cách thêm list ảnh thumbnail, ảnh mô tả : DONE
+                                     Lỗi postman test api create product - khi thêm ảnh: Thêm được 1 field, field ảnh còn lại ko thêm được: FIXED - chuyển sang dùng app postman
+37. Tạo giao diện trang admin, create product, create category - implement create product và get product, phần quyền Admin user: PENDING
+                - admin layout - header, sidebar: DONE
+38. Apply lazy load
+39. Chia route admin, tạo list item trên sidebar : DONE - update giao diện listItemButton, collapse - DONE
+40. Tạo breadcrumb - DONE
+41. Tạo common component text area - DONE
+42. Create admin/ ecommerce/add new product page
+                                - Tạm thời set cứng category - DONE
+                                - Get list category và tạo add new product - book - DONE
+                                - Implement get main category api to frontend -fix ui : DONE
+                               
+43. Create action sidebar menu - DONE
+44. Create input price component - DONE
+45. Tạo giao diện thêm sản phẩm cho từng category và implement API (UI :Validation, react hook form, Gắn API thử thêm 1 sản phẩm) - PENDING
+                        - UI - add product book - DONE
+                        - Schemas validate product - DONE
+                        - Implement API create product - DONE
+46. Tạo common table 
+            - UI table - DONE
+            - Pagination - DONE
+            - Select row - DONE
+            - useTable - DONE
+            - Filter - DONE
+            - xử lý data có các data con. row có các row con để bấm collapse xổ các row con xuống - DONE     
+47. Tạo giao diện quản lý category và thêm category cho sản phẩm - DONE
+                    -Add main category : DONE
+                    -Delete category: DONE
+                    -Add sub category: DONE
+                    -Edit category: DONE
+48. Tạo component banner, video banner: DONE
+49. Hiển thị danh sách sản phẩm trên homepage - UI: PENDING
+            -Chia khung hiển thị các phần sản phẩm : DONE
+            -Product Card: DONE
+            -Product Card Detail SideBar: DONE
+            -Hiển thị banner sản phẩm về sách ở homepage: PENDING 
+                - làm list product book tab + slider product : DONE
+                - Làm api lấy list book - DONE, list theo sub category book hiển thị 8 sản phẩm mới nhất - show ra homepage : DONE
+            -Trang chi tiết sản phẩm - UI : PENDING
+                - Làm breadcrumb cho product page: DONE
+                - Chia 3 khung trang chi tiết: Hình ảnh sản phẩm, thông tin sản phẩm, action mua bán, 
+                    phần bình luận, sản phẩm liên quan, sản phẩm vừa xem: DONE
+                    + Làm các component product image: DONE
+                    + product description: DONE
+                    + product action: DONE
+                    + product comment: PENDING
+            -Hiển thị trang sản phẩm sách - category about book - UI  : DONE
+50. UI Trang giỏ hàng : DONE
+51. Create api for detail product page, category product page: PENDING
+                    + Tạo api get list sub category của từng sản phẩm và implement ra danh mục: DONE
+                    + Get list ra dựa vào sản phẩm muốn xem: DONE - 2
+                    + Tạo api lọc theo giá sản phẩm, lọc cứng: DONE
+                    + Tạo api lọc theo bộ lọc: DONE - 3 - Thiết kế giao diện là một popup chứa các Filter: DONE -1
+                    + Tạo một combobox chứa các trường bộ lọc: DONE - Tạo api lọc theo bộ lọc: DONE
+                    + Ráp api vào giao diện: DONE
+                    + Tạo phần suspense load sản phẩm: DONE
+                    + Tạo phần load thểm sản phẩm khi click vào nút: DONE
+                    + Tạo api comment và giao diện comment: DONE
+                            - UI : DONE
+                            - API: DONE
+                                    . MODEL comment: DONE
+                                    . Route, controller, service, repository: DONE
+                                    . Add Comment: DONE
+                                    . Get List comment: DONE
+                                    . Get All comment images of product API: DONE, create ui box to watch comment image: DONE
+                                    . API get my comment: DONE, delete my comment: DONE
+                                    . UI my comment and logic FE: DONE
+                                    . Filter All comments rating api: DONE
+                                    . Summary rating: DONE
+                    + API Cart : DONE
+                               . Model: DONE
+                               . Route, controller, service, repository: DONE
+                               . UI: DONE
+                    + Implement API to FE: PENDING
+                                    -Sửa lại route public, authen: DONE
+                    + API ORDER: PENDING
+                               . Model: DONE
+                               . Route, controller, service, repository: PENDING
+                               . UI: PENDING
+                    + Implement API to FE: PENDING
+            
+                        

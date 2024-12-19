@@ -1,0 +1,6 @@
+Atoms: Các component đơn giản nhất (như button, input).
+Molecules: Sự kết hợp của nhiều atoms để tạo thành một 
+thành phần giao diện có chức năng cụ thể. ví dụ textfield gồm input và label
+Organisms: Sự kết hợp của nhiều molecules và atoms để tạo thành các 
+thành phần giao diện phức tạp và lớn hơn.
+Ví dụ header, footer
